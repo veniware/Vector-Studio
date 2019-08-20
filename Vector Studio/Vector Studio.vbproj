@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DC9751A-1095-4B3A-805A-4DA6A69AA127}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Vector_Studio.My.MyApplication</StartupObject>
+    <RootNamespace>Vector_Studio</RootNamespace>
+    <AssemblyName>Vector Studio</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Vector Studio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Vector Studio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>vsicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialogs\frmHtmlDialog.Designer.vb">
+      <DependentUpon>frmHtmlDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmHtmlDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmSvgDialog.Designer.vb">
+      <DependentUpon>frmSvgDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmSvgDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmSingleValue.Designer.vb">
+      <DependentUpon>frmSingleValue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmSingleValue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libs\DirectPixels.vb" />
+    <Compile Include="Libs\Filters.vb" />
+    <Compile Include="frmRender.Designer.vb">
+      <DependentUpon>frmRender.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRender.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libs\Html.vb" />
+    <Compile Include="Libs\Svg.vb" />
+    <Compile Include="Nodes\BasicNode.Designer.vb">
+      <DependentUpon>BasicNode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\BasicNode.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListBox.designer.vb">
+      <DependentUpon>ListBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoubleBuffered.Designer.vb">
+      <DependentUpon>DoubleBuffered.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DoubleBuffered.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NodeButton.Designer.vb">
+      <DependentUpon>NodeButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NodeButton.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\BitmapLoader.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\Brightness.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\Contrast.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ChannelA.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ChannelR.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ChannelG.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ChannelB.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ChannelC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ChannelM.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ChannelY.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ChannelK.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\HtmlNode.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\Normalize.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\Gamma.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ExportBitmap.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\Grayscale.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\Invert.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\Opacity.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\Resize.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\ScaleColors.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\SolidColor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nodes\SvgNode.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Libs\Render.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\frmHtmlDialog.resx">
+      <DependentUpon>frmHtmlDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmSvgDialog.resx">
+      <DependentUpon>frmSvgDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmSingleValue.resx">
+      <DependentUpon>frmSingleValue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRender.resx">
+      <DependentUpon>frmRender.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nodes\BasicNode.resx">
+      <DependentUpon>BasicNode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBox.resx">
+      <DependentUpon>ListBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoubleBuffered.resx">
+      <DependentUpon>DoubleBuffered.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NodeButton.resx">
+      <DependentUpon>NodeButton.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScrollBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScrollDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScrollUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SrollButtonBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\Note.png" />
+    <None Include="Resources\MainMenuLow.png" />
+    <None Include="Resources\MainMenuhigh.png" />
+    <None Include="Resources\Error.png" />
+    <None Include="Resources\Button.png" />
+    <None Include="Resources\Apply.png" />
+    <Content Include="vsicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
